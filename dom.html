@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    /* Add your styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; /* Reset margin to 0 */
+      background-color: #333;
+      color: #fff;
+    }
+
+    header {
+      background-color: #222;
+      padding: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%; /* Ensure the navigation bar takes full width */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .heart-icon {
+      cursor: pointer;
+    }
+
+    .total-price {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+  </head>
+  <body>
+  
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+        <a href="#" class="about-link">About</a>
+      </nav>
+    </header>
+  
+    <div id="cart-container">
+      <!-- Sample items in the cart -->
+      <div class="cart-item" data-price="20">
+        <span>Item 1</span>
+        <button onclick="decrementQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button onclick="incrementQuantity(this)">+</button>
+        <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+        <button onclick="removeItem(this)">Remove</button>
+      </div>
+  
+      <div class="cart-item" data-price="30">
+        <span>Item 2</span>
+        <button onclick="decrementQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button onclick="incrementQuantity(this)">+</button>
+        <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+        <button onclick="removeItem(this)">Remove</button>
+      </div>
+  
+      <div class="cart-item" data-price="15">
+        <span>Item 3</span>
+        <button onclick="decrementQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button onclick="incrementQuantity(this)">+</button>
+        <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+        <button onclick="removeItem(this)">Remove</button>
+      </div>
+  
+      <div class="cart-item" data-price="25">
+        <span>Item 4</span>
+        <button onclick="decrementQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button onclick="incrementQuantity(this)">+</button>
+        <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+        <button onclick="removeItem(this)">Remove</button>
+      </div>
+  
+      <div class="cart-item" data-price="10">
+        <span>Item 5</span>
+        <button onclick="decrementQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button onclick="incrementQuantity(this)">+</button>
+        <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+        <button onclick="removeItem(this)">Remove</button>
+      </div>
+    </div>
+  
+    <div class="total-price">
+      Total Price: $<span id="total-price">100</span>
+    </div>
+    
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Contact</a>
+      <a href="#" class="about-link">About</a>
+    </nav>
+  </header>
+
+  <div id="cart-container">
+    <!-- Sample items in the cart -->
+    <div class="cart-item" data-price="20">
+      <span>Item 1</span>
+      <button onclick="decrementQuantity(this)">-</button>
+      <span class="quantity">1</span>
+      <button onclick="incrementQuantity(this)">+</button>
+      <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+      <button onclick="removeItem(this)">Remove</button>
+    </div>
+
+    <div class="cart-item" data-price="30">
+      <span>Item 2</span>
+      <button onclick="decrementQuantity(this)">-</button>
+      <span class="quantity">1</span>
+      <button onclick="incrementQuantity(this)">+</button>
+      <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+      <button onclick="removeItem(this)">Remove</button>
+    </div>
+
+    <div class="cart-item" data-price="15">
+      <span>Item 3</span>
+      <button onclick="decrementQuantity(this)">-</button>
+      <span class="quantity">1</span>
+      <button onclick="incrementQuantity(this)">+</button>
+      <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+      <button onclick="removeItem(this)">Remove</button>
+    </div>
+
+    <div class="cart-item" data-price="25">
+      <span>Item 4</span>
+      <button onclick="decrementQuantity(this)">-</button>
+      <span class="quantity">1</span>
+      <button onclick="incrementQuantity(this)">+</button>
+      <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+      <button onclick="removeItem(this)">Remove</button>
+    </div>
+
+    <div class="cart-item" data-price="10">
+      <span>Item 5</span>
+      <button onclick="decrementQuantity(this)">-</button>
+      <span class="quantity">1</span>
+      <button onclick="incrementQuantity(this)">+</button>
+      <span class="heart-icon" onclick="toggleLike(this)">❤️</span>
+      <button onclick="removeItem(this)">Remove</button>
+    </div>
+  </div>
+
+  <div class="total-price">
+    Total Price: $<span id="total-price">100</span>
+  </div>
